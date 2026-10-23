@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoteMGR – Gérez vos élections simplement</title>
+<meta name="description" content="VoteMGR : application pour les commissions de nomination des églises, associations et groupes qui organisent des élections.">
+<link rel="icon" href="logo.png">
+<style>
+:root{
+  --bg:#f5f7fb; --card:#ffffff; --text:#1c2333; --muted:#5b6478;
+  --primary:#1e5bd8; --primary-d:#1748b0; --accent:#0f9d6b; --fb:#1877f2; --border:#e3e7f0;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f1420; --card:#171e2e; --text:#eef1f8; --muted:#9aa5bd; --border:#27304a; }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{text-align:center;padding:48px 20px 32px}
+header img{width:110px;height:110px;object-fit:contain;border-radius:22px;margin-bottom:16px}
+h1{font-size:2.2rem;margin-bottom:8px}
+.tagline{color:var(--muted);max-width:620px;margin:0 auto;font-size:1.1rem}
+main{max-width:900px;margin:0 auto;padding:0 20px 40px}
+.buttons{display:flex;flex-direction:column;gap:14px;max-width:420px;margin:24px auto 40px}
+.btn{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:600;font-size:1.05rem;padding:15px 20px;border-radius:12px;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-app{background:var(--primary)} .btn-app:hover{background:var(--primary-d)}
+.btn-pdf{background:var(--accent)}
+.btn-video{background:var(--fb)}
+h2{font-size:1.4rem;margin-bottom:16px;text-align:center}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:40px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
+.audience{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center;color:var(--muted)}
+footer{text-align:center;padding:24px 20px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo VoteMGR">
+  <h1>VoteMGR</h1>
+  <p class="tagline">L’application simple pour organiser et suivre vos élections, pensée pour les commissions de nomination des églises.</p>
+</header>
+
+<main>
+  <div class="buttons">
+    <a class="btn btn-app" href="VoteMGR.apk" download>📱 Télécharger VoteMGR</a>
+    <a class="btn btn-pdf" href="tuto.pdf" download>📄 Télécharger Tutoriel PDF</a>
+    <a class="btn btn-video" href="https://www.facebook.com/share/v/1Svs8N5RWh/" target="_blank" rel="noopener">▶️ Regarder Vidéo tutoriel</a>
+  </div>
+
+  <h2>Pourquoi VoteMGR ?</h2>
+  <div class="features">
+    <div class="card">
+      <h3>🗳️ Simple à utiliser</h3>
+      <p>Une interface claire pour gérer les candidats, les voix et les tours de scrutin sans complication.</p>
+    </div>
+    <div class="card">
+      <h3>⛪ Pour les églises</h3>
+      <p>Conçu pour aider les commissions de nomination à mener des élections ordonnées et transparentes.</p>
+    </div>
+    <div class="card">
+      <h3>🤝 Pour toute organisation</h3>
+      <p>Associations, groupes, clubs ou comités : VoteMGR s’adapte à toute élection.</p>
+    </div>
+  </div>
+
+  <div class="audience">
+    Destiné en priorité aux commissions de nomination des églises, mais utilisable par toute association ou groupe qui organise des élections.
+  </div>
+</main>
+
+<footer>
+  © <span id="annee"></span> VoteMGR – Tous droits réservés
+</footer>
+
+<script>
+  document.getElementById('annee').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
